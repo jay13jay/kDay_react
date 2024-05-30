@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import "../container.css"
-
 function Backside() {
   const [confetti, setConfetti] = useState(false);
   return (
@@ -12,9 +10,9 @@ function Backside() {
         <div className="main-container">
           <h1>I Love you to the 🌔 and back!</h1>
           <div className="card">
-              <div className={confetti && "confetti"} />
-              <div className={confetti && "confetti"} />
-              <div className={confetti && "confetti"} />
+              {[...Array(20).keys()].map((i) => (
+                <div key={i} className={confetti && "confetti"} />
+              ))}
 
             <h2>Happy Birthday!</h2>
             <button
@@ -22,12 +20,14 @@ function Backside() {
               onClick={() => {
                   setConfetti(!confetti)}}>Click Me!</button>
 
-                  <div className={confetti && "confetti"} />
-                  <div className={confetti && "confetti"} />
-                  <div className={confetti && "confetti"} />
-                  <div className={confetti && "confetti"} />
-                  <div className={confetti && "confetti"} />
+                  {[...Array(20).keys()].map((i) => (
+                    <div key={i} className={confetti && "confetti"} />
+                  ))}
             <p>You are most definitely my favorite person on the planet</p>
+            <button
+              className="btn-grad"
+              onClick={() => {
+                  setConfetti(!confetti)}}>Go Back ⬅️</button>
           </div>
         </div>
     </div>

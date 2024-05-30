@@ -3,10 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  /* width: 90vw; */
 }
 
 .home {
-  width: 90%;
+  /* width: 90%; */
+  max-width: 90%;
 }
          
 .btn-grad {
@@ -58,7 +60,10 @@
 }
 
 .container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 90%;
   height: 100%;
 }
 
