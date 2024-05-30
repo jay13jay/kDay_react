@@ -23,6 +23,7 @@
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
+  font-size: x-large;
 }
 
 .btn-grad:hover {
