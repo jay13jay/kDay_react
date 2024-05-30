@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 function Backside() {
   const [confetti, setConfetti] = useState(false);
@@ -8,13 +10,13 @@ function Backside() {
         <div key={i} className={confetti && "confetti"} />
       ))}
         <div className="main-container">
-          <h1>I Love you to the 🌔 and back!</h1>
+          <h3>I Love you to the 🌔 and back!</h3>
           <div className="card">
               {[...Array(20).keys()].map((i) => (
                 <div key={i} className={confetti && "confetti"} />
               ))}
 
-            <h2>Happy Birthday!</h2>
+            <h3>Happy Birthday!</h3>
             <button
               className="btn-grad"
               onClick={() => {
@@ -24,10 +26,8 @@ function Backside() {
                     <div key={i} className={confetti && "confetti"} />
                   ))}
             <p>You are most definitely my favorite person on the planet</p>
-            <button
-              className="btn-grad"
-              onClick={() => {
-                  setConfetti(!confetti)}}>Go Back ⬅️</button>
+            <button className="btn-grad">
+              <Link to="/">Go Back ⬅️ </Link></button>
           </div>
         </div>
     </div>
